@@ -21,3 +21,8 @@ git clone https://github.com/bulentack/terraform-k3s-nginx
 cd terraform-k3s-nginx
 terraform init
 terraform apply -auto-approve
+
+kubectl get all -n nginx-demo
+kubectl port-forward svc/nginx-service -n nginx-demo 8080:80
+
+Open your browser at http://localhost:8080
