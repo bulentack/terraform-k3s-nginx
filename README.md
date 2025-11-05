@@ -22,7 +22,11 @@ cd terraform-k3s-nginx
 terraform init
 terraform apply -auto-approve
 
+Verify Deployment
+
 kubectl get all -n nginx-demo
 kubectl port-forward svc/nginx-service -n nginx-demo 8080:80
 
 Open your browser at http://localhost:8080
+Stack
+Terraform • Kubernetes • NGINX • k3s
